@@ -9,7 +9,7 @@ Warsztaty laboratoryjne z komunikacji w warstwie automatyki przemysłowej (OT) i
 ### 1. Pobranie i instalacja zależności
 Otwórz terminal w folderze projektu i uruchom:
 ```bash
-pip install -r requirements.txt
+pip install "pymodbus>=3.6.0"
 ```
 
 ### 2. Weryfikacja stanowiska komputerowego
