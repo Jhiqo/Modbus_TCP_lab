@@ -85,7 +85,7 @@ def build_server_context():
 # 3. PĘTLA MODELU FIZYCZNEGO (DYNAMIKA ZBIORNIKA)
 # -----------------------------------------------------------------------------
 async def physics_loop(store):
-    level = 150.0  # Poziom początkowy cieczy [l]
+    level = 350.0  # Poziom początkowy cieczy [l]
 
     while True:
         await asyncio.sleep(0.1)  # Krok dyskretyzacji dt = 100 ms
@@ -94,8 +94,8 @@ async def physics_loop(store):
         valve_open = store.get_coil(0)
 
         # 2. Równanie różnicowe bilansu masy cieczy
-        inflow = 0.35
-        outflow = 0.7 if valve_open else 0.0
+        inflow = 6
+        outflow = 12 if valve_open else 0.0
         level = max(0.0, min(1000.0, level + inflow - outflow))
 
         # 3. Zapis zmiennych procesowych do rejestrów obiektu
