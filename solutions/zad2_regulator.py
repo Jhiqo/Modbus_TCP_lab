@@ -21,12 +21,13 @@ try:
             continue
 
         level = rr.registers[0]
+        valve = client.read_coils(address=0, count=1).bits[0]
 
         # Logika histerezy z pamiecia stanu
-        if level > 800 and not valve_open:
+        if level > 800 and valve==0:
             client.write_coil(address=0, value=True)
             valve_open = True
-        elif level < 300 and valve_open:
+        elif level < 300 and valve==1:
             client.write_coil(address=0, value=False)
             valve_open = False
 
