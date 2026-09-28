@@ -6,7 +6,7 @@ Warsztaty laboratoryjne z komunikacji w warstwie automatyki przemysłowej (OT) i
 
 ## ⚡ Szybki start (Krok po kroku)
 
-### 1. Pobranie i instalacja zależności
+### 1. Pobranie i instalacja zależności (jeżeli pymodbus nie jest zainstalowany)
 Otwórz terminal w folderze projektu i uruchom:
 ```bash
 pip install "pymodbus==3.12.0"
