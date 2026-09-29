@@ -49,9 +49,9 @@ except KeyboardInterrupt:
 
 finally:
     # -----------------------------------------------------------------
-    # TODO 4 (FAIL-SAFE): Wymus stan bezpieczny obiektu (zamkniecie zaworu)
+    # TODO 4 (FAIL-SAFE): Wymus stan bezpieczny obiektu (otwarcie zaworu)
     # przed zamknieciem polaczenia TCP!
-    # client.write_coil(address=0, value=False)
+    # client.write_coil(address=0, value=True)
     # -----------------------------------------------------------------
     client.close()
     print("[CLEANUP] Polaczenie Modbus zamkniete bezpiecznie.")
